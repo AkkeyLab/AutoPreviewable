@@ -1,0 +1,34 @@
+import SwiftUI
+import UIKit
+
+#if DEBUG
+{% for type in types.implementing.AutoPreviewable|class %}
+struct {{ type.name }}Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            {{ type.name }}()
+                .previewLayout(.fixed(width: 320, height: 568))
+                .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
+            {{ type.name }}()
+                .previewLayout(.fixed(width: 414, height: 896))
+                .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
+        }
+    }
+
+    static var platform: PreviewPlatform? = .iOS
+}
+
+extension {{ type.name }}: UIViewRepresentable {
+    typealias UIViewType = {{ type.name }}
+
+    // swiftlint:disable force_cast
+    func makeUIView(context: Context) -> UserDetailBasicInfoCell {
+        return UIStoryboard(name: String(describing: self), bundle: Bundle.main).instantiateInitialViewController() as! {{ type.name }}
+    }
+    // swiftlint:enable force_cast
+
+    func updateUIView(_ uiView: {{ type.name }}, context: Context) {
+    }
+}
+{% endfor %}
+#endif
