@@ -22,8 +22,8 @@ extension {{ type.name }}: UIViewRepresentable {
     typealias UIViewType = {{ type.name }}
 
     // swiftlint:disable force_cast
-    func makeUIView(context: Context) -> UserDetailBasicInfoCell {
-        return UIStoryboard(name: String(describing: self), bundle: Bundle.main).instantiateInitialViewController() as! {{ type.name }}
+    func makeUIView(context: Context) -> {{ type.name }} {
+        return UINib(nibName: String(describing: String(describing: self)), bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! {{ type.name }}
     }
     // swiftlint:enable force_cast
 

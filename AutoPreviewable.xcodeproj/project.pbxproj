@@ -14,6 +14,7 @@
 		F449F5F02335393B00FC21F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F449F5EF2335393B00FC21F3 /* Assets.xcassets */; };
 		F449F5F32335393B00FC21F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F449F5F12335393B00FC21F3 /* LaunchScreen.storyboard */; };
 		F449F5FE2335393B00FC21F3 /* AutoPreviewableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449F5FD2335393B00FC21F3 /* AutoPreviewableTests.swift */; };
+		F449F60A2335E86200FC21F3 /* AutoPreviewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449F6092335E86200FC21F3 /* AutoPreviewable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		F449F5F92335393B00FC21F3 /* AutoPreviewableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoPreviewableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F449F5FD2335393B00FC21F3 /* AutoPreviewableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoPreviewableTests.swift; sourceTree = "<group>"; };
 		F449F5FF2335393B00FC21F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F449F6092335E86200FC21F3 /* AutoPreviewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoPreviewable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		F449F5E52335393900FC21F3 /* AutoPreviewable */ = {
 			isa = PBXGroup;
 			children = (
+				F449F6082335E86200FC21F3 /* CodeGenerated */,
 				F449F5E62335393900FC21F3 /* AppDelegate.swift */,
 				F449F5E82335393900FC21F3 /* SceneDelegate.swift */,
 				F449F5EA2335393900FC21F3 /* ViewController.swift */,
@@ -97,6 +100,14 @@
 				F449F5FF2335393B00FC21F3 /* Info.plist */,
 			);
 			path = AutoPreviewableTests;
+			sourceTree = "<group>";
+		};
+		F449F6082335E86200FC21F3 /* CodeGenerated */ = {
+			isa = PBXGroup;
+			children = (
+				F449F6092335E86200FC21F3 /* AutoPreviewable.swift */,
+			);
+			path = CodeGenerated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 				F449F5EB2335393900FC21F3 /* ViewController.swift in Sources */,
 				F449F5E72335393900FC21F3 /* AppDelegate.swift in Sources */,
 				F449F5E92335393900FC21F3 /* SceneDelegate.swift in Sources */,
+				F449F60A2335E86200FC21F3 /* AutoPreviewable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
