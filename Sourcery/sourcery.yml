@@ -1,0 +1,5 @@
+sources:
+  - ../AutoPreviewable
+templates:
+  - ./templates/AutoPreviewable.stencil
+output: ../AutoPreviewable/CodeGenerated/AutoPreviewable.swift
