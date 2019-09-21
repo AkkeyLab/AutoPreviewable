@@ -3,6 +3,7 @@ import UIKit
 
 #if DEBUG
 {% for type in types.implementing.AutoPreviewable|class %}
+{% if type.isFinal %}
 struct {{ type.name }}Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -30,5 +31,6 @@ extension {{ type.name }}: UIViewRepresentable {
     func updateUIView(_ uiView: {{ type.name }}, context: Context) {
     }
 }
+{% endif %}
 {% endfor %}
 #endif
