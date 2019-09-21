@@ -26,7 +26,7 @@ extension AkkeyView: UIViewRepresentable {
 
     // swiftlint:disable force_cast
     func makeUIView(context: Context) -> AkkeyView {
-        return UINib(nibName: String(describing: String(describing: self)), bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! AkkeyView
+        return .init()
     }
     // swiftlint:enable force_cast
 

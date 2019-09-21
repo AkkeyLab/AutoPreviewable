@@ -24,7 +24,12 @@ extension {{ type.name }}: UIViewRepresentable {
 
     // swiftlint:disable force_cast
     func makeUIView(context: Context) -> {{ type.name }} {
-        return UINib(nibName: String(describing: String(describing: self)), bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! {{ type.name }}
+        {% if type.annotations.xibLess %}
+        return .init()
+        {% else %}
+        return UINib(nibName: String(describing: String(describing: self)), bundle: nil)
+            .instantiate(withOwner: nil, options: nil)[0] as! {{ type.name }}
+        {% endif %}
     }
     // swiftlint:enable force_cast
 
