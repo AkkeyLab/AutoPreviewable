@@ -17,5 +17,5 @@ final class ViewController: UIViewController {
     }
 }
 
-// sourcery: xibLess
+// sourcery: xibLess, customHeight=100
 final class AkkeyView: UIView, AutoPreviewable {}
