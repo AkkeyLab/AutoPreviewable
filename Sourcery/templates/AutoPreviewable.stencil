@@ -1,9 +1,10 @@
-import SwiftUI
 import UIKit
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
 
-#if DEBUG
 {% for type in types.implementing.AutoPreviewable|class %}
 {% if type.isFinal %}
+@available(iOS 13, *)
 struct {{ type.name }}Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -28,6 +29,7 @@ struct {{ type.name }}Previews: PreviewProvider {
     static var platform: PreviewPlatform? = .iOS
 }
 
+@available(iOS 13, *)
 extension {{ type.name }}: UIViewRepresentable {
     typealias UIViewType = {{ type.name }}
 
