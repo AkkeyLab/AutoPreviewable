@@ -2,10 +2,11 @@
 // DO NOT EDIT
 
 
-import SwiftUI
 import UIKit
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
 
-#if DEBUG
+@available(iOS 13, *)
 struct AkkeyViewPreviews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -24,6 +25,7 @@ struct AkkeyViewPreviews: PreviewProvider {
     static var platform: PreviewPlatform? = .iOS
 }
 
+@available(iOS 13, *)
 extension AkkeyView: UIViewRepresentable {
     typealias UIViewType = AkkeyView
 
