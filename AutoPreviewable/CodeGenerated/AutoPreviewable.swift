@@ -9,16 +9,11 @@ import SwiftUI
 @available(iOS 13, *)
 struct AkkeyViewPreviews: PreviewProvider {
     static var previews: some View {
-        Group {
+        ForEach(DeviceType.allCases, id: \.self) { type in
             AkkeyView()
-                .previewLayout(.fixed(width: 320, height: 100))
-                .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
-            AkkeyView()
-                .previewLayout(.fixed(width: 375, height: 100))
-                .previewDevice(PreviewDevice(rawValue: "iPhone XS"))
-            AkkeyView()
-                .previewLayout(.fixed(width: 414, height: 100))
-                .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
+                .previewLayout(type.layout(height: 100))
+                .previewDevice(PreviewDevice(rawValue: type.rawValue))
+                .previewDisplayName(type.rawValue)
         }
     }
 
@@ -37,4 +32,23 @@ extension AkkeyView: UIViewRepresentable {
         // Make parameter change for preview
     }
 }
+
+// swiftlint:disable identifier_name
+private enum DeviceType: String, CaseIterable {
+    case se = "iPhone SE"
+    case xs = "iPhone XS"
+    case xsmax = "iPhone XS Max"
+
+    func layout(height: CGFloat) -> PreviewLayout {
+        switch self {
+        case .se:
+            return .fixed(width: 320, height: height)
+        case .xs:
+            return .fixed(width: 375, height: height)
+        case .xsmax:
+            return .fixed(width: 414, height: height)
+        }
+    }
+}
+// swiftlint:enable identifier_name
 #endif
