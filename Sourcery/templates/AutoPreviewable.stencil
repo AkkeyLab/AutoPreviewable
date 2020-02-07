@@ -7,22 +7,13 @@ import SwiftUI
 @available(iOS 13, *)
 struct {{ type.name }}Previews: PreviewProvider {
     static var previews: some View {
-        Group {
+        ForEach(DeviceType.allCases, id: \.self) { type in
             {{ type.name }}()
                 {% if type.annotations.customHeight %}
-                .previewLayout(.fixed(width: 320, height: {{ type.annotations.customHeight }}))
+                .previewLayout(type.layout(height: {{ type.annotations.customHeight }}))
                 {% endif %}
-                .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
-            {{ type.name }}()
-                {% if type.annotations.customHeight %}
-                .previewLayout(.fixed(width: 375, height: {{ type.annotations.customHeight }}))
-                {% endif %}
-                .previewDevice(PreviewDevice(rawValue: "iPhone XS"))
-            {{ type.name }}()
-                {% if type.annotations.customHeight %}
-                .previewLayout(.fixed(width: 414, height: {{ type.annotations.customHeight }}))
-                {% endif %}
-                .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
+                .previewDevice(PreviewDevice(rawValue: type.rawValue))
+                .previewDisplayName(type.rawValue)
         }
     }
 
@@ -50,4 +41,23 @@ extension {{ type.name }}: UIViewRepresentable {
 }
 {% endif %}
 {% endfor %}
+
+// swiftlint:disable identifier_name
+private enum DeviceType: String, CaseIterable {
+    case se = "iPhone SE"
+    case xs = "iPhone XS"
+    case xsmax = "iPhone XS Max"
+
+    func layout(height: CGFloat) -> PreviewLayout {
+        switch self {
+        case .se:
+            return .fixed(width: 320, height: height)
+        case .xs:
+            return .fixed(width: 375, height: height)
+        case .xsmax:
+            return .fixed(width: 414, height: height)
+        }
+    }
+}
+// swiftlint:enable identifier_name
 #endif
