@@ -28,6 +28,13 @@ final class AkkeyView: UIView, AutoPreviewable {
     // do something
 }
 ```
+There is another way to generate using annotations.
+```swift
+// sourcery: AutoPreviewable, xibLess
+final class AkkeyView: UIView {
+    // do something
+}
+```
 By default, processing is performed assuming that there is an XIB file with the same name as the class name.  
 If the XIB file does not exist, specify as follows.
 ```swift
