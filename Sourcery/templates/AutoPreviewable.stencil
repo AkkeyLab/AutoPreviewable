@@ -22,9 +22,9 @@ struct {{ type.name }}Previews: PreviewProvider {
 
 @available(iOS 13, *)
 extension {{ type.name }}: UIViewRepresentable {
-    typealias UIViewType = {{ type.name }}
+    {{ type.accessLevel }} typealias UIViewType = {{ type.name }}
 
-    func makeUIView(context: Context) -> {{ type.name }} {
+    {{ type.accessLevel }} func makeUIView(context: Context) -> {{ type.name }} {
         {% if type.annotations.xibLess %}
         return .init()
         {% else %}
@@ -35,7 +35,7 @@ extension {{ type.name }}: UIViewRepresentable {
         {% endif %}
     }
 
-    func updateUIView(_ uiView: {{ type.name }}, context: Context) {
+    {{ type.accessLevel }} func updateUIView(_ uiView: {{ type.name }}, context: Context) {
         // Make parameter change for preview
     }
 }
