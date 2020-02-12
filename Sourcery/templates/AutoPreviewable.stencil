@@ -2,7 +2,7 @@ import UIKit
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-{% for type in types.types|class where type.implements.AutoPreviewable or type|annotated:"AutoPreviewable" %}
+{% for type in types.types|class where type.actualTypeName.AutoPreviewable or type|annotated:"AutoPreviewable" %}
 {% if type.isFinal %}
 @available(iOS 13, *)
 struct {{ type.name }}Previews: PreviewProvider {

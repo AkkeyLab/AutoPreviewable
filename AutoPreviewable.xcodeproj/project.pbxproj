@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9976D90F23F3C620007FF856 /* AutoPreviewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9976D90E23F3C620007FF856 /* AutoPreviewable.swift */; };
+		9976D91323F3C80E007FF856 /* AccessControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9976D91223F3C80E007FF856 /* AccessControlTests.swift */; };
+		9976D91523F3C847007FF856 /* AnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9976D91423F3C847007FF856 /* AnnotationTests.swift */; };
+		9976D91723F3C879007FF856 /* ProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9976D91623F3C879007FF856 /* ProtocolTests.swift */; };
+		9976D91E23F3E3BA007FF856 /* AnnotationsParameterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9976D91D23F3E3BA007FF856 /* AnnotationsParameterTests.swift */; };
 		F449F5E72335393900FC21F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449F5E62335393900FC21F3 /* AppDelegate.swift */; };
 		F449F5E92335393900FC21F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449F5E82335393900FC21F3 /* SceneDelegate.swift */; };
 		F449F5EB2335393900FC21F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449F5EA2335393900FC21F3 /* ViewController.swift */; };
 		F449F5EE2335393900FC21F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F449F5EC2335393900FC21F3 /* Main.storyboard */; };
 		F449F5F02335393B00FC21F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F449F5EF2335393B00FC21F3 /* Assets.xcassets */; };
 		F449F5F32335393B00FC21F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F449F5F12335393B00FC21F3 /* LaunchScreen.storyboard */; };
-		F449F5FE2335393B00FC21F3 /* AutoPreviewableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449F5FD2335393B00FC21F3 /* AutoPreviewableTests.swift */; };
 		F449F60A2335E86200FC21F3 /* AutoPreviewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449F6092335E86200FC21F3 /* AutoPreviewable.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9976D90E23F3C620007FF856 /* AutoPreviewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoPreviewable.swift; sourceTree = "<group>"; };
+		9976D91223F3C80E007FF856 /* AccessControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlTests.swift; sourceTree = "<group>"; };
+		9976D91423F3C847007FF856 /* AnnotationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationTests.swift; sourceTree = "<group>"; };
+		9976D91623F3C879007FF856 /* ProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTests.swift; sourceTree = "<group>"; };
+		9976D91D23F3E3BA007FF856 /* AnnotationsParameterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationsParameterTests.swift; sourceTree = "<group>"; };
 		F449F5E32335393900FC21F3 /* AutoPreviewable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoPreviewable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F449F5E62335393900FC21F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F449F5E82335393900FC21F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +46,6 @@
 		F449F5F22335393B00FC21F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F449F5F42335393B00FC21F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F449F5F92335393B00FC21F3 /* AutoPreviewableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoPreviewableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F449F5FD2335393B00FC21F3 /* AutoPreviewableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoPreviewableTests.swift; sourceTree = "<group>"; };
 		F449F5FF2335393B00FC21F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F449F6092335E86200FC21F3 /* AutoPreviewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoPreviewable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9976D90D23F3C60F007FF856 /* CodeGenerated */ = {
+			isa = PBXGroup;
+			children = (
+				9976D90E23F3C620007FF856 /* AutoPreviewable.swift */,
+			);
+			path = CodeGenerated;
+			sourceTree = "<group>";
+		};
 		F449F5DA2335393900FC21F3 = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +112,12 @@
 		F449F5FC2335393B00FC21F3 /* AutoPreviewableTests */ = {
 			isa = PBXGroup;
 			children = (
-				F449F5FD2335393B00FC21F3 /* AutoPreviewableTests.swift */,
+				9976D90D23F3C60F007FF856 /* CodeGenerated */,
 				F449F5FF2335393B00FC21F3 /* Info.plist */,
+				9976D91223F3C80E007FF856 /* AccessControlTests.swift */,
+				9976D91423F3C847007FF856 /* AnnotationTests.swift */,
+				9976D91623F3C879007FF856 /* ProtocolTests.swift */,
+				9976D91D23F3E3BA007FF856 /* AnnotationsParameterTests.swift */,
 			);
 			path = AutoPreviewableTests;
 			sourceTree = "<group>";
@@ -222,7 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F449F5FE2335393B00FC21F3 /* AutoPreviewableTests.swift in Sources */,
+				9976D91523F3C847007FF856 /* AnnotationTests.swift in Sources */,
+				9976D91323F3C80E007FF856 /* AccessControlTests.swift in Sources */,
+				9976D91723F3C879007FF856 /* ProtocolTests.swift in Sources */,
+				9976D91E23F3E3BA007FF856 /* AnnotationsParameterTests.swift in Sources */,
+				9976D90F23F3C620007FF856 /* AutoPreviewable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
