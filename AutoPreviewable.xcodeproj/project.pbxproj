@@ -154,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F449F6052335393B00FC21F3 /* Build configuration list for PBXNativeTarget "AutoPreviewableTests" */;
 			buildPhases = (
+				9976D91F23F81430007FF856 /* Generate Sourcery */,
 				F449F5F52335393B00FC21F3 /* Sources */,
 				F449F5F62335393B00FC21F3 /* Frameworks */,
 				F449F5F72335393B00FC21F3 /* Resources */,
@@ -225,6 +226,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9976D91F23F81430007FF856 /* Generate Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Sourcery";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which sourcery >/dev/null; then\n  sourcery \\\n    --sources \"${PROJECT_DIR}/AutoPreviewableTests\" \\\n    --templates \"${PROJECT_DIR}/Sourcery/templates\" \\\n    --output \"${PROJECT_DIR}/AutoPreviewableTests/CodeGenerated/AutoPreviewable.swift\"\nelse\n  echo \"warning: Sourcery not installed, please setup using ./setup.sh\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F449F5DF2335393900FC21F3 /* Sources */ = {

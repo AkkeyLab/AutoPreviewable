@@ -12,12 +12,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup Sourcery
       run: sh ./setup.sh
-    - name: Generate by Sourcery
-      run: |
-        sourcery \
-          --sources AutoPreviewableTests \
-          --templates Sourcery/templates \
-          --output AutoPreviewableTests/CodeGenerated/AutoPreviewable.swift
     - name: Test on iOS Simulator
       run: |
         xcodebuild test \
